@@ -1,41 +1,174 @@
 <style>
-.markdown-body>*:first-child {
-    display: none;
-}
+  .line {
+    margin-bottom: 15px; /* 在每行下方增加15px的空间 */
+  }
 </style>
+<div class="line">---------------------------------------------------------------------------------------------------------------------</div>
+<div class="line">Hello everyone！</div>
+<div class="line">Welcome and thank you for join us today for the voice assesment session.</div>
 
-# Hello everyone, welcome and thank you for join us today for the voice assesment session.
-<source src="" type="data/prompt/3q2.wav type="audio/wav"">Your browser does not support the audio element.</audio></td>
-
----
-
----
-
-> **Abstract**
-> 感谢您参与我的毕业设计研究，本研究旨在评估零样本语音合成模型的语音自然度。零样本语音合成技术使得模型能够通过分析短暂的参考语音（3-10秒），学习其音色，以生成与给定文本相匹配的语音输出。
->在本次评估中，我们将采用MOS（Mean Opinion Score）方法，这是一种广泛用于语音合成领域的标准化质量评估方法。
->参与者将听取由两个不同模型生成的语音样本，并对每个样本的自然度进行评分。评分范围从1（非常不自然）到5（非常自然），
->以此来反映语音的自然流畅性和听起来的真实程度。
->非常感谢您的参与和评价，在评测过程中，有任何问题或建议都可以及时跟李卡布沟通！
-
----
-
-
-
-
-### Resynthesis from neural audio codec 
-
+<div class="line">本次测评示例如下：</div>
 
 <table>
   <tr>
-    <th>Prompt</th>
+    <th>参考语音（Prompt)</th>
     <th>A model</th>
     <th>B model</th>
   </tr>
   <tr>
-    <td><audio controls preload="none"><source src="data/prompt/m1_s1_segment_1.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-    <td><audio controls preload="none"><source src="data/encodec/m1_s1.wav" type="audio/wav">Your browser does not support the audio element.</audio> </td>
+    <td><audio controls preload="none"><source src="data/prompts/3q2.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+    <td><audio controls preload="none"><source src="data/encodec/welcome and 3q.wav" type="audio/wav">Your browser does not support the audio element.</audio> </td>
+    <td><audio controls preload="none"><source src="data/vocos/welcome and 3q.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+  </tr>
+</table>
+<div class="line">---------------------------------------------------------------------------------------------------------------------</div>
+
+<style>
+  .line {
+    margin-bottom: 10px; /* 在每行下方增加10px的空间 */
+  }
+</style>
+<div class="line">感谢您参与我的毕业设计研究，本研究旨在评估零样本语音合成模型的语音自然度、相似度两个指标。</div>
+<div class="line">零样本语音合成技术使得模型能够通过分析短暂的参考语音（3-10秒），学习其音色</div>
+<div class="line">以生成与给定文本相匹配的语音输出。</div>
+
+<style>
+  .line {
+    margin-bottom: 5px; /* 在每行下方增加10px的空间 */
+  }
+</style>
+<div class="line">**************************************************************************************************</div>
+<div class="line">在本次评估中，我们将采用平均意见法 MOS（Mean Opinion Score）。</div>
+<div class="line">参与者将听取由两个不同模型生成的语音样本，并对每个样本的自然度、相似度进行评分。</div>
+<div class="line">评分范围从1（非常不自然）到5（非常自然）</div>
+<div class="line">以此来反映语音的自然流畅性和真实感。</div>
+<div class="line">非常感谢您的参与和评价，在评测过程中，有任何问题或建议都可以及时跟李卡布沟通！</div>
+
+<div class="line">**************************************************************************************************</div>
+
+<div class="line">本次评估共有20个英文朗读者的声音，10名女性，10名男性</div>
+<div class="line">请分别为 A模型和 B模型合成的语音进行语音自然度、相似度评分</div>
+
+<div class="line">不同speaker的语速、语调稍有不同，10s的参考语音内容可能有变化，参考语音script大致为如下，</div>
+<div class="line">Although the breeze had now utterly ceased, we had made a great deal of way during the night, </div>
+<div class="line">and we're now lying becommed about a half a mile to the southeast of the low eastern coast.</div>
+<div class="line">模型目标合成文本为：Although the breeze had now utterly ceased</div>
+<div class="line">模型概率性出现的幻觉问题，如增音、漏因现象在本次评估中可忽略</div>
+<div class="line">**************************************************************************************************</div>
+
+<table>
+  <tr>
+    <th>女声参考语音（Prompt)</th>
+    <th>A model</th>
+    <th>B model</th>
+  </tr>
+  <tr>
+    <td><audio controls preload="none"><source src="data/prompts/f1_segment_1.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+    <td><audio controls preload="none"><source src="data/encodec/f1_s1.wav" type="audio/wav">Your browser does not support the audio element.</audio> </td>
+    <td><audio controls preload="none"><source src="data/vocos/f1_s1.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+  </tr>
+  <tr>
+    <td><audio controls preload="none"><source src="data/prompts/f2_s1_segment_1.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+    <td><audio controls preload="none"><source src="data/encodec/f2_S2.wav" type="audio/wav">Your browser does not support the audio element.</audio> </td>
+    <td><audio controls preload="none"><source src="data/vocos/f2_s1.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+  </tr>
+  <tr>
+    <td><audio controls preload="none"><source src="data/prompts/f3_s1_segment_1.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+    <td><audio controls preload="none"><source src="data/encodec/f3_s1.wav" type="audio/wav">Your browser does not support the audio element.</audio> </td>
+    <td><audio controls preload="none"><source src="data/vocos/f3_s1.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+  </tr>
+  <tr>
+    <td><audio controls preload="none"><source src="data/prompts/f4_s1_segment_1.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+    <td><audio controls preload="none"><source src="data/encodec/f4_s1.wav" type="audio/wav">Your browser does not support the audio element.</audio> </td>
+    <td><audio controls preload="none"><source src="data/vocos/f4_s1.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+  </tr>
+  <tr>
+    <td><audio controls preload="none"><source src="data/prompts/f5_s1_segment_1.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+    <td><audio controls preload="none"><source src="data/encodec/f5_s1.wav" type="audio/wav">Your browser does not support the audio element.</audio> </td>
+    <td><audio controls preload="none"><source src="data/vocos/f5_s1.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+  </tr>
+  <tr>
+    <td><audio controls preload="none"><source src="data/prompts/f6_s1_segment_1.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+    <td><audio controls preload="none"><source src="data/encodec/f6_s1.wav" type="audio/wav">Your browser does not support the audio element.</audio> </td>
+    <td><audio controls preload="none"><source src="data/vocos/f6_s1.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+  </tr>
+  <tr>
+    <td><audio controls preload="none"><source src="data/prompts/f7_s1_segment_1.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+    <td><audio controls preload="none"><source src="data/encodec/f7_s1.wav" type="audio/wav">Your browser does not support the audio element.</audio> </td>
+    <td><audio controls preload="none"><source src="data/vocos/f7_s1.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+  </tr>
+  <tr>
+    <td><audio controls preload="none"><source src="data/prompts/f8_s1_segment_1.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+    <td><audio controls preload="none"><source src="data/encodec/f8_s1.wav" type="audio/wav">Your browser does not support the audio element.</audio> </td>
+    <td><audio controls preload="none"><source src="data/vocos/f8_s1.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+  </tr>
+  <tr>
+    <td><audio controls preload="none"><source src="data/prompts/f9_s1_segment_1.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+    <td><audio controls preload="none"><source src="data/encodec/f9_s1.wav" type="audio/wav">Your browser does not support the audio element.</audio> </td>
+    <td><audio controls preload="none"><source src="data/vocos/f9_s1.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+  </tr>
+   <tr>
+    <td><audio controls preload="none"><source src="data/prompts/f10_s1_segment_1.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+    <td><audio controls preload="none"><source src="data/encodec/f10_s1.wav" type="audio/wav">Your browser does not support the audio element.</audio> </td>
+    <td><audio controls preload="none"><source src="data/vocos/f10_s1.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <th>男声参考语音（Prompt)</th>
+    <th>A model</th>
+    <th>B model</th>
+  </tr>
+  <tr>
+    <td><audio controls preload="none"><source src="data/prompts/m1_s1_segment_1.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+    <td><audio controls preload="none"><source src="data/encodec/m1_S1.wav" type="audio/wav">Your browser does not support the audio element.</audio> </td>
     <td><audio controls preload="none"><source src="data/vocos/m1_s1.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+  </tr>
+  <tr>
+    <td><audio controls preload="none"><source src="data/prompts/m2_s1_segment_1.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+    <td><audio controls preload="none"><source src="data/encodec/m2_s1.wav" type="audio/wav">Your browser does not support the audio element.</audio> </td>
+    <td><audio controls preload="none"><source src="data/vocos/m2_s1.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+  </tr>
+  <tr>
+    <td><audio controls preload="none"><source src="data/prompts/m3_s1_segment_1.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+    <td><audio controls preload="none"><source src="data/encodec/m3_s1.wav" type="audio/wav">Your browser does not support the audio element.</audio> </td>
+    <td><audio controls preload="none"><source src="data/vocos/m3_s1.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+  </tr>
+  <tr>
+    <td><audio controls preload="none"><source src="data/prompts/m4_s1_segment_1.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+    <td><audio controls preload="none"><source src="data/encodec/m4_s1.wav" type="audio/wav">Your browser does not support the audio element.</audio> </td>
+    <td><audio controls preload="none"><source src="data/vocos/m4_s1.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+  </tr>
+  <tr>
+    <td><audio controls preload="none"><source src="data/prompts/m5_s1_segment_1.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+    <td><audio controls preload="none"><source src="data/encodec/m5_s1.wav" type="audio/wav">Your browser does not support the audio element.</audio> </td>
+    <td><audio controls preload="none"><source src="data/vocos/m5_s1.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+  </tr>
+  <tr>
+    <td><audio controls preload="none"><source src="data/prompts/m6_s1_segment_1.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+    <td><audio controls preload="none"><source src="data/encodec/m6_s1.wav" type="audio/wav">Your browser does not support the audio element.</audio> </td>
+    <td><audio controls preload="none"><source src="data/vocos/m6_s1.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+  </tr>
+  <tr>
+    <td><audio controls preload="none"><source src="data/prompts/m7_s1_segment_1.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+    <td><audio controls preload="none"><source src="data/encodec/m7_s1.wav" type="audio/wav">Your browser does not support the audio element.</audio> </td>
+    <td><audio controls preload="none"><source src="data/vocos/m7_s1.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+  </tr>
+  <tr>
+    <td><audio controls preload="none"><source src="data/prompts/m8_s1_segment_1.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+    <td><audio controls preload="none"><source src="data/encodec/m8_s1.wav" type="audio/wav">Your browser does not support the audio element.</audio> </td>
+    <td><audio controls preload="none"><source src="data/vocos/m8_s1.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+  </tr>
+  <tr>
+    <td><audio controls preload="none"><source src="data/prompts/m9_s1_segment_1.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+    <td><audio controls preload="none"><source src="data/encodec/m9_s1.wav" type="audio/wav">Your browser does not support the audio element.</audio> </td>
+    <td><audio controls preload="none"><source src="data/vocos/m9_s1.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+  </tr>
+  <tr>
+    <td><audio controls preload="none"><source src="data/prompts/m10_s1_segment_1.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+    <td><audio controls preload="none"><source src="data/encodec/m10_s1.wav" type="audio/wav">Your browser does not support the audio element.</audio> </td>
+    <td><audio controls preload="none"><source src="data/vocos/m10_s1.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
   </tr>
  
   
@@ -45,5 +178,4 @@
 
  
 </table> 
-
 
