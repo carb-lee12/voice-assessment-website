@@ -7,7 +7,7 @@
 /* 针对宽度小于或等于 480px 的屏幕 */
 @media (max-width: 480px) {
   body {
-    font-size: 12px;
+    font-size: 10px;
   }
 
   .column {
@@ -16,7 +16,7 @@
   }
 
   .audio-player {
-    width: 100%;
+    width: 80%;
     height: auto;
   }
 }
@@ -24,7 +24,7 @@
 /* 针对宽度在 481px 到 600px 之间的屏幕 */
 @media (min-width: 481px) and (max-width: 600px) {
   body {
-    font-size: 14px;
+    font-size: 10px;
   }
 
   .column {
@@ -33,7 +33,7 @@
   }
 
   .audio-player {
-    width: 100%;
+    width: 80%;
     height: auto;
   }
 }
@@ -41,16 +41,16 @@
 /* 针对宽度在 601px 到 800px 之间的屏幕 */
 @media (min-width: 601px) and (max-width: 800px) {
   body {
-    font-size: 16px;
+    font-size: 10px;
   }
 
   .column {
-    width: 50%; /* 可能在较大的屏幕上列可以并排显示 */
+    width: 100%; 
     padding: 10px;
   }
 
   .audio-player {
-    width: 100%;
+    width: 80%;
     height: auto;
   }
 }
