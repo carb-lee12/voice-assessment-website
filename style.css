@@ -3,19 +3,54 @@
   margin-bottom: 15px; /* 在每行下方增加15px的空间 */
 }
 
-/* 媒体查询，适用于屏幕宽度小于600px的设备 */
-@media (max-width: 600px) {
-  .line {
-    margin-bottom: 10px; /* 在较小屏幕上每行下方增加10px的空间 */
-    font-size: 14px; /* 减小字体大小 */
+
+/* 针对宽度小于或等于 480px 的屏幕 */
+@media (max-width: 480px) {
+  body {
+    font-size: 12px;
   }
-  table, audio {
-    width: 100%; /* 表格和音频播放器宽度自适应 */
-    max-width: 100%; /* 限制最大宽度 */
+
+  .column {
+    width: 100%;
+    padding: 0;
   }
-  th, td {
-    padding: 8px; /* 减少表格单元格内边距 */
-    font-size: 12px; /* 减小表格内字体大小 */
+
+  .audio-player {
+    width: 100%;
+    height: auto;
   }
 }
 
+/* 针对宽度在 481px 到 600px 之间的屏幕 */
+@media (min-width: 481px) and (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+
+  .column {
+    width: 100%;
+    padding: 5px;
+  }
+
+  .audio-player {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* 针对宽度在 601px 到 800px 之间的屏幕 */
+@media (min-width: 601px) and (max-width: 800px) {
+  body {
+    font-size: 16px;
+  }
+
+  .column {
+    width: 50%; /* 可能在较大的屏幕上列可以并排显示 */
+    padding: 10px;
+  }
+
+  .audio-player {
+    width: 100%;
+    height: auto;
+  }
+}
