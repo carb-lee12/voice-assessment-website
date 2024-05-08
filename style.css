@@ -1,0 +1,21 @@
+/* 基础样式 */
+.line {
+  margin-bottom: 15px; /* 在每行下方增加15px的空间 */
+}
+
+/* 媒体查询，适用于屏幕宽度小于600px的设备 */
+@media (max-width: 600px) {
+  .line {
+    margin-bottom: 10px; /* 在较小屏幕上每行下方增加10px的空间 */
+    font-size: 14px; /* 减小字体大小 */
+  }
+  table, audio {
+    width: 100%; /* 表格和音频播放器宽度自适应 */
+    max-width: 100%; /* 限制最大宽度 */
+  }
+  th, td {
+    padding: 8px; /* 减少表格单元格内边距 */
+    font-size: 12px; /* 减小表格内字体大小 */
+  }
+}
+
